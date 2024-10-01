@@ -5,6 +5,7 @@ const router = require("./router/router");
 const { handleError } = require("./utils/handleErrors");
 const chalk = require("chalk");
 const loggerMiddleware = require("./logger/loggerService");
+const { initializeDatabase } = require("./initialData/initialDataService");
 require("dotenv").config();
 
 
@@ -27,7 +28,8 @@ app.use((err, req, res, next) => {
     return handleError(res, 500, message);
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     console.log(chalk.yellow("app is listening to port " + PORT));
-    connectToDb();
+    await connectToDb();
+    await initializeDatabase();
 });

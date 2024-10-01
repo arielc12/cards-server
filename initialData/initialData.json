@@ -1,0 +1,138 @@
+{
+    "users": [
+        {
+            "name": {
+                "first": "John",
+                "middle": "D.",
+                "last": "Doe"
+            },
+            "phone": "0512345678",
+            "email": "john.doe@gmail.com",
+            "password": "Password123!",
+            "image": {
+                "url": "http://www.image1.com",
+                "alt": "John's profile picture"
+            },
+            "address": {
+                "state": "CA",
+                "country": "USA",
+                "city": "Los Angeles",
+                "street": "Main St",
+                "houseNumber": 1,
+                "zip": 90001
+            },
+            "isAdmin": false,
+            "isBusiness": true
+        },
+        {
+            "name": {
+                "first": "Jane",
+                "middle": "M.",
+                "last": "Smith"
+            },
+            "phone": "0512345567",
+            "email": "jane.smith@gmail.com",
+            "password": "Password123!",
+            "image": {
+                "url": "http://www.image2.com",
+                "alt": "Jane's profile picture"
+            },
+            "address": {
+                "state": "IL",
+                "country": "Israel",
+                "city": "Arad",
+                "street": "Shoham",
+                "houseNumber": 5,
+                "zip": 8920435
+            },
+            "isAdmin": false,
+            "isBusiness": false
+        },
+        {
+            "name": {
+                "first": "Alice",
+                "middle": "L.",
+                "last": "Brown"
+            },
+            "phone": "0512345569",
+            "email": "alice.brown@gmail.com",
+            "password": "Password123!",
+            "image": {
+                "url": "http://www.image3.com",
+                "alt": "Alice's profile picture"
+            },
+            "address": {
+                "state": "NY",
+                "country": "USA",
+                "city": "New York",
+                "street": "5th Ave",
+                "houseNumber": 10,
+                "zip": 10001
+            },
+            "isAdmin": true,
+            "isBusiness": false
+        }
+    ],
+    "cards": [
+        {
+            "title": "my wonderful card!!!!!!",
+            "subtitle": "im just checking",
+            "description": "lorem ipsum",
+            "phone": "012-3211234",
+            "email": "jon-card@gmail.com",
+            "web": "www.bing.com",
+            "image": {
+                "url": "https://img.izismile.com/img/img13/20201030/640/you_have_never_seen_something_like_this_640_36.jpg",
+                "alt": "image of something"
+            },
+            "address": {
+                "state": "IL",
+                "country": "israel",
+                "city": "arad",
+                "street": "shoham",
+                "houseNumber": 5,
+                "zip": 8920435
+            }
+        },
+        {
+            "title": "Jane's Business Card",
+            "subtitle": "Professional services",
+            "description": "Offering great services!",
+            "phone": "012-3456789",
+            "email": "jane.card@gmail.com",
+            "web": "www.janeservices.com",
+            "image": {
+                "url": "https://example.com/image2.jpg",
+                "alt": "Jane's business card image"
+            },
+            "address": {
+                "state": "IL",
+                "country": "Israel",
+                "city": "Arad",
+                "street": "Shoham",
+                "houseNumber": 5,
+                "zip": 8920435
+            }
+        },
+        {
+            "title": "Alice's Admin Card",
+            "subtitle": "Admin work",
+            "description": "Managing everything!",
+            "phone": "012-9876543",
+            "email": "alice.card@gmail.com",
+            "web": "www.adminwork.com",
+            "image": {
+                "url": "https://example.com/image3.jpg",
+                "alt": "Alice's admin card image"
+            },
+            "address": {
+                "state": "NY",
+                "country": "USA",
+                "city": "New York",
+                "street": "5th Ave",
+                "houseNumber": 10,
+                "zip": 10001
+            }
+        }
+    ]
+}
