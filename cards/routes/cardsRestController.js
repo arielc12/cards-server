@@ -1,5 +1,5 @@
 const express = require("express");
-const { createCard, getCards, getCard, updateCard, deleteCard, likeCard, changeBizNumber } = require("../models/cardsAccessDataService");
+const { createCard, getCards, getCard, updateCard, deleteCard, likeCard, changeBizNumber, getMyCards } = require("../models/cardsAccessDataService");
 const auth = require("../../auth/authService");
 const normalizeCard = require("../helpers/normalizeCard");
 const { handleError } = require("../../utils/handleErrors");
@@ -38,10 +38,10 @@ router.get("/", async (req, res) => {
 router.get("/my-cards", auth, async (req, res) => {
     try {
         const userInfo = req.user;
-        if (!userInfo.isbusiness) {
+        if (!userInfo.isBusiness) {
             return handleError(res, 403, "only business user can get my-cards");
         }
-        let cards = await getCard(userInfo._id);
+        let cards = await getMyCards(userInfo._id);
         if (!cards) {
             return handleError(res, 404, "No cards found");
         }
@@ -121,7 +121,7 @@ router.patch("/biz-number/:cardId", auth, async (req, res) => {
             return handleError(res, 403, "only the user who created this card or admin can change biz number of this card");
         }
         const { newBizNumber } = req.body;
-        let card = await changeBizNumber(cardId, newBizNumber);
+        let card = await changeBizNumber(userInfo._id.toString(), newBizNumber);
         res.send(card);
     } catch (error) {
         handleError(res, error.status || 400, error.message);
